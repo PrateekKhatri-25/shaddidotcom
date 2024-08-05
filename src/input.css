@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+
+.active{
+    top:5% !important;
+    z-index: 100;
+}
+.non-active{
+    @apply bg-white w-[350px] absolute top-[-200%] left-[35%] mx-auto;
+}
+.font_family{
+    color: #d2b17c;
+    font-family: "Playfair Display", serif;
+}
+#owl_carousel1 .owl-next{
+    height: 30px;
+    width: 30px;
+    color: white;
+    background-color: #ccc;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    top: 40%;
+}
+#owl_carousel1 .owl-prev{
+    height: 30px;
+    width: 30px;
+    color: white;
+    background-color: #ccc;
+    border-radius: 50%;
+    position: absolute;
+    left: 0px;
+    top: 40%;
+}
+
+@tailwind utilities;
+*{
+    margin: 0px;
+    padding: 0%;
+}

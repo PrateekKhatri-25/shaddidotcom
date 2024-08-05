@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaadi.com</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body>
+    <div class="max-w-[100%] bg-[#F1F1F2]">
+        <!-- section-1 start -->
+        <div
+            class="max-w-[100%] bg-[url('images/shaadi-desktop-banner-v1.webp')] p-[20px] bg-center bg-cover bg-no-repeat">
+            <!-- modal -->
+            <div class="w-screen h-screen z-10 fixed left-0 top-0 bg-[rgba(0,0,0,0.3)] hidden" id="backdiv"></div>
+
+            <div class="non-active " id="insidediv">
+                <button class="absolute right-1 top-[2px] text-black" id="btn"><i
+                        class="fa-regular fa-circle-xmark"></i></button>
+                <div class="p-[10px]">
+                    <img src="images/home-page-layer-logo.png" class="w-[50px] h-[50px] mt-[10px] mx-auto">
+                    <p class="m-[10px] text-[20px] text-center">Welcome back! Please Login</p>
+                    <div class="p-[20px] text-[18px]">
+                        <div class="">
+                            <span class="text-[#0000005f]">Mobile No./Email</span><br />
+                            <input type="text" placeholder="Enter Mobile No./Email"
+                                class="my-[5px] border-[1px] p-[5px] rounded-[5px] w-[80%]">
+                        </div>
+                        <div class="">
+                            <span class="text-[#0000005f]">Password</span><br />
+                            <input type="text" placeholder="Enter Password"
+                                class="my-[5px] border-[1px] p-[5px] rounded-[5px] w-[80%]">
+                        </div>
+
+                        <div class="my-[5px] flex justify-between">
+                            <div class="flex">
+                                <input type="checkbox">
+                                <p class="text-[#0000005f] m-[2px] text-[13px]">Stay Logged in</p>
+                            </div>
+                            <div class="text-[13px]">
+                                <p class="hover:underline text-[#00C2E1] cursor-pointer">Forget Password?</p>
+                            </div>
+                        </div>
+                        <div class="m-[10px] text-center">
+                            <button
+                                class="w-[90%] text-white py-[3px] rounded-[5px] bg-[#53B9D2] hover:bg-[#00bcd5a4]">Login</button>
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <div class="border-[1px] w-[20%] h-[1px]"> </div>
+                            <div class="text-[#0000005f] text-[12px]"> OR </div>
+                            <div class="border-[1px] w-[20%] h-[1px]"> </div>
+                        </div>
+                        <div class="m-[10px] text-center">
+                            <button
+                                class="w-[90%] text-white py-[3px] rounded-[5px] bg-[#53B9D2] hover:bg-[#00bcd5a4]">Login
+                                with OTP</button>
+                        </div>
+                        <div class="flex my-[15px] justify-center">
+                            <p class="text-[#0000005f] text-[14px]">New to Shaddi?</p>
+                            <p class="text-[14px] hover:bg-[#ccc] mx-[2px] cursor-pointer">Sign Up Free></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- end modal -->
+
+            <div class="max-w-[1000px] mx-auto border-3 flex justify-between items-center">
+                <div class="">
+                    <img src="images/Matrimony-Service-by-Shaadi.com.png" alt="">
+                </div>
+                <div class="text-white text-[20px] flex justify-between w-[23%]">
+                    <div class="hover:underline relative" id="modal1"> <span class="cursor-pointer"> Login <i
+                                class="fa-solid fa-angle-down"></i></span>
+
+                    </div>
+                    <div class=" hover:underline cursor-pointer hidden md:block "><i class="fa-solid fa-headset"></i>
+                        Help
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-white max-w-[1170px] mx-auto mt-[23.5%]">
+
+                <h1 class="text-center md:text-[30px] text-[25px] font-bold">Trusted Matrimony & Matchmaking Service
+                </h1>
+
+                <div class="bg-[rgba(0,0,0,0.4)] max-w-[100%] my-[20px] py-[28px]">
+
+                    <div
+                        class="grid md:grid-cols-[15%_22%_15%_25%_15%] gap-[15px] grid-cols-[40%_40%] justify-center items-center text-[black] text-[14px] lg:text-[16px]">
+
+                        <div class="rounded-[10px]  ">
+
+                            <p class="text-white m-[10px]">I'm looking for a</p>
+                            <select name="gender" id="gender" class="w-[100%] rounded-[5px] p-[5px_2px]">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div class=" grid grid-cols-[45%_10%_45%] items-center">
+                            <div class="rounded-[10px]  ">
+                                <p class="text-white m-[10px]">aged</p>
+                                <select name="agebefore" id="agebefore"
+                                    class=" w-[100%] rounded-[5px] p-[5px_2px] snap-y">
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                </select>
+                            </div>
+                            <div class="text-white mt-[40px] text-center">
+                                to
+                            </div>
+                            <div class="mt-[42px]">
+                                <select name="agebefore" id="agebefore"
+                                    class=" w-[100%] rounded-[5px] p-[5px_2px] snap-y">
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option valuue="30">30</option>
+                                    <option value="31">31</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="rounded-[10px]  ">
+                            <p class="text-white m-[10px]">of religion</p>
+                            <select name="religion" id="religion" class="w-[100%] rounded-[5px] p-[5px_2px]">
+                                <option value="">Select</option>
+                                <option value="hindu">Hindu</option>
+                                <option value="muslim">Muslim</option>
+                                <option value="christian">Christian</option>
+                                <option value="sikh">Sikh</option>
+                                <option value="parsi">Parsi</option>
+                                <option value="jain">Jain</option>
+                                <option value="buddhist">Buddhist</option>
+                                <option value="jewish">Jewish</option>
+                                <option value="spiritual">Spiritual</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="rounded-[10px]  ">
+                            <p class="text-white m-[10px]">and mother tongue</p>
+                            <select name="language" id="language" class="w-[100%] rounded-[5px] p-[5px_2px]">
+                                <option value="">Select</option>
+                                <option value="hindi">Hindi</option>
+                                <option value="marathi">Marathi</option>
+                                <option value="punjabi">Punjabi</option>
+                                <option value="bengali">Bengali</option>
+                                <option value="gujarati">Gujarati</option>
+                                <option value="urdu">Urdu</option>
+                                <option value="telugu">Telugu</option>
+                                <option value="kannada">Kannada</option>
+                                <option value="english">English</option>
+                                <option value="tamil">Tamil</option>
+                                <option value="oriya">Oriya</option>
+                                <option value="marwari">Marwari</option>
+                            </select>
+                        </div>
+                        <div
+                            class=" bg-[#53B9D2] md:block hidden p-[5px_2px] rounded-[5px] text-center hover:bg-[#00bcd5a4] text-white mt-[42px] w-[100%] ">
+                            <button class="">Let's Begin</button>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-[#53B9D2] md:hidden block mx-auto  p-[5px_2px] rounded-[5px] text-center hover:bg-[#00bcd5a4] text-white mt-[42px] w-[82%]">
+                        <button class="">Let's Begin</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- section-1 end -->
+
+        <!-- section-2 start -->
+        <!-- <div class="max-w-[100%] bg-[#F1F1F2]"> -->
+        <div class="max-w-[1000px] m-[50px_auto] border-2 border-black rounded-[20px] bg-[#201530] p-[20px] pb-[10px]">
+            <div class="grid sm:grid-cols-[60%_2%_35%] justify-center text-center sm:text-left">
+                <div class="">
+                    <div class="font_family font-bold md:text-[34px] sm:text-[20px]">
+                        Exclusive & Personalised Matchmaking by Shaadi.com
+                    </div>
+                    <ul class="list-none flex text-white my-[20px]">
+                        <li class="hover:underline">Top Rated Consultants</li>
+                        <li> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</li>
+                        <li class="hover:underline">5 times higher success rates</li>
+                        <li> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</li>
+                        <li class="hover:underline">100% Privacy</li>
+                    </ul>
+
+                </div>
+                <div class="bg-[#d2b17c] w-[1px] h-[100%]"></div>
+                <div class=" text-center mx-auto">
+                    <img src="images/vip_logo.webp" class="h-[20%]">
+                    <button class="text-black mt-[40px] bg-[#d2b17c] font-bold w-[100%] rounded-[5px] p-[10px]">Get
+                        Invited <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <!-- section-2 end -->
+
+        <!-- section-3 start -->
+        <div class="max-w-[1000px] m-[7%_auto] pb-[2%]">
+            <div class=" text-[#FF5A60] text-[30px] text-center">Find your Special Someone</div>
+            <div class=" my-[7%] grid sm:grid-cols-3 grid-cols-1">
+
+                <div class="m-[5px]">
+                    <img src="images/pen-document2.png" class=" m-[5%_auto] w-[60%] cursor-pointer">
+                    <span class="text-[#53B9D2] text-[25px] sm:ml-[34%] hover:underline cursor-pointer ml-[43%]">Sign
+                        Up</span>
+                    <p class="text-[#3d3a3a] text-center text-[15px]">Register for free & put up your Matrimony Profile
+                    </p>
+                </div>
+
+                <div class="m-[5px]">
+                    <img src="images/multiperson.png" class=" m-[5%_auto] w-[60%] cursor-pointer">
+                    <span
+                        class="text-[#53B9D2] text-[25px] sm:ml-[34%] ml-[43%] hover:underline cursor-pointer">Connect</span>
+                    <p class="text-[#3d3a3a] text-center text-[15px]">Select & Connect with Matches you like</p>
+                </div>
+
+                <div class="m-[5px]">
+                    <img src="images/Screenshot 2024-06-05 081348.png" class=" m-[5%_auto] w-[60%] cursor-pointer">
+                    <span
+                        class="text-[#53B9D2] text-[25px] sm:ml-[34%] ml-[43%] hover:underline cursor-pointer">Interact</span>
+                    <p class="text-[#3d3a3a] text-center text-[15px]">Become a Premium Member & Start a Conversation</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- section-3 end -->
+
+    <!-- section-4 start -->
+    <div class="max-w-[1000px] m-[6%_auto]">
+        <p class=" text-[#FF5A60] md:text-[35px] text-[20px] text-center">Matrimony Service with Millions of Success
+            Stories</p>
+        <div class="my-[7%]" id="shaadi_slider">
+            <div class="person_inner">
+                <div class="owl-carousel owl-theme" id="owl_carousel1">
+                    <!-- item1 -->
+                    <div
+                        class="item border-[1px] w-[95%] border-[#ccc] shadow-[2px_1px_3px_3px_#ccc] overflow-hidden duration-[1s] hover:shadow-[4px_-4px_5px_7px_#ccc] cursor-pointer">
+                        <img src="images/img1.jpg" alt="">
+                        <div class="m-[5%] ">
+                            <h2 class="text-[#3d3a3a] text-[25px]">Uma & Sandip</h2>
+                            <p class="text-[#4e4949] text-justify mb-[20%] text-[16px]">
+                                It was like Magic! We connected
+                                well in 2 months and decided to tie the knot. It seemed
+                                like everything was falling in place. We trusted our...!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- item2 -->
+                    <div
+                        class="item border-[1px] w-[95%] border-[#ccc] shadow-[2px_1px_3px_3px_#ccc] overflow-hidden duration-[1s] hover:shadow-[4px_-4px_5px_7px_#ccc] cursor-pointer">
+                        <img src="images/img2.jpg" alt="">
+                        <div class="m-[5%] ">
+                            <h2 class="text-[#3d3a3a] text-[25px]">Vishal & Vidhya</h2>
+                            <p class="text-[#4e4949] text-justify mb-[20%] text-[16px]">
+                                We got engaged on 7th April 2023. We started talking on 8th March 2023.
+                                Finding my soulmate on Shaadi.com felt like a dream. I'd...!
+                            </p>
+                        </div>
+                    </div>
+                    <!-- item3 -->
+                    <div
+                        class="item border-[1px] w-[95%] border-[#ccc] shadow-[2px_1px_3px_3px_#ccc] overflow-hidden duration-[1s] hover:shadow-[4px_-4px_5px_7px_#ccc] cursor-pointer">
+                        <img src="images/img3.jpg" alt="">
+                        <div class="m-[5%] ">
+                            <h2 class="text-[#3d3a3a] text-[25px]">Alankar & Megha</h2>
+                            <p class="text-[#4e4949] text-justify mb-[20%] text-[16px]">
+                                Hi It's all about our love story. Alankar was a paid member and mine was a free account.
+                                I remember it was something special...!
+                            </p>
+                        </div>
+                    </div>
+                    <!-- item4 -->
+                    <div
+                        class="item border-[1px] w-[95%] border-[#ccc] shadow-[2px_1px_3px_3px_#ccc] overflow-hidden duration-[1s] hover:shadow-[4px_-4px_5px_7px_#ccc] cursor-pointer">
+                        <img src="images/img4.jpg" alt="">
+                        <div class="m-[5%] ">
+                            <h2 class="text-[#3d3a3a] text-[25px]">Dr Shashi & Dr Pooja</h2>
+                            <p class="text-[#4e4949] text-justify mb-[20%] text-[16px]">
+                                From Shaadi.com to Happily Ever After: The Love Story of Dr Shashi and Dr Pooja
+                                In the digital age of romance, fate brought together Dr...!
+                            </p>
+                        </div>
+                    </div>
+                    <!-- item5 -->
+                    <div
+                        class="item border-[1px] w-[95%] border-[#ccc] shadow-[2px_1px_3px_3px_#ccc] overflow-hidden duration-[1s] hover:shadow-[4px_-4px_5px_7px_#ccc] cursor-pointer">
+                        <img src="images/img5.jpg" alt="">
+                        <div class="m-[5%] ">
+                            <h2 class="text-[#3d3a3a] text-[25px]">Charmi & Udit</h2>
+                            <p class="text-[#4e4949] text-justify mb-[20%] text-[16px]">
+                                We started conversing through messages on the platform, discussing various topics
+                                ranging from our hobbies to our aspirations...!
+                            </p>
+                        </div>
+                    </div>
+                    <!-- item6 -->
+                    <div
+                        class="item border-[1px] w-[95%] border-[#ccc] shadow-[2px_1px_3px_3px_#ccc] overflow-hidden duration-[1s] hover:shadow-[4px_-4px_5px_7px_#ccc] cursor-pointer">
+                        <img src="images/img6.jpg" alt="">
+                        <div class="m-[5%] ">
+                            <h2 class="text-[#3d3a3a] text-[25px]">Srinesh & Sanju</h2>
+                            <p class="text-[#4e4949] text-justify mb-[20%] text-[16px]">
+                                For a long time, we had been searching to find the perfect partner, it came close to no
+                                luck. Then on a normal day, on my Shaadi.com...!
+                            </p>
+                        </div>
+                    </div>
+                    <!-- item7 -->
+                    <div
+                        class="item border-[1px] w-[95%] border-[#ccc] shadow-[2px_1px_3px_3px_#ccc] overflow-hidden duration-[1s] hover:shadow-[4px_-4px_5px_7px_#ccc] cursor-pointer">
+                        <img src="images/img7.jpg" alt="">
+                        <div class="m-[5%] ">
+                            <h2 class="text-[#3d3a3a] text-[25px]">Shubham & Nidhi</h2>
+                            <p class="text-[#4e4949] text-justify mb-[20%] text-[16px]">
+                                Thank you very much to the team of Shaadi.com who gave me my companion.. I will always
+                                be thankful to you people throughout my life...!
+                            </p>
+                        </div>
+                    </div>
+                    <!-- item-8 -->
+                    <div
+                        class="item border-[1px] w-[95%] border-[#ccc] shadow-[2px_1px_3px_3px_#ccc] overflow-hidden duration-[1s] hover:shadow-[4px_-4px_5px_7px_#ccc] cursor-pointer">
+                        <img src="images/img8.jpg" alt="">
+                        <div class="m-[5%] ">
+                            <h2 class="text-[#3d3a3a] text-[25px]">Vinita & Mandeep</h2>
+                            <p class="text-[#4e4949] text-justify mb-[20%] text-[16px]">
+                                Thank you very much to the team of Shaadi.com who gave me my companion.. I will always
+                                be thankful to you people throughout my life...!
+                            </p>
+                        </div>
+                    </div>
+                    <!-- item-9 -->
+                    <div
+                        class="item border-[1px] w-[95%] border-[#ccc] shadow-[2px_1px_3px_3px_#ccc] overflow-hidden duration-[1s] hover:shadow-[4px_-4px_5px_7px_#ccc] cursor-pointer">
+                        <img src="images/img9.jpg" alt="">
+                        <div class="m-[5%] ">
+                            <h2 class="text-[#3d3a3a] text-[25px]">Vashishtha & Namrata</h2>
+                            <p class="text-[#4e4949] text-justify mb-[20%] text-[16px]">
+                                Thank you very much to the team of Shaadi.com who gave me my companion.. I will always
+                                be thankful to you people throughout my life...!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- section-4 end -->
+
+    <!-- section-5 start -->
+    <div class="max-w-[100%] bg-[#FF5A60] my-[3%] text-center">
+        <div class="max-w-[1000px] mx-auto p-[20px] sm:flex text-white justify-center gap-[3%] items-center ">
+            <p class="text-[25px]">Your story is waiting to happen!</p>
+            <button
+                class="border-2 border-white text-[20px] p-[15px] rounded-[5px] mt-[3%] sm:mt-[0] hover:bg-[white] hover:text-[#53B9D2] duration-[0.5s]">Get
+                Started</button>
+        </div>
+    </div>
+    <!-- section-5 end -->
+
+    <!-- section-6 start -->
+    <div class="max-w-[1170px] m-[7%_auto]">
+        <h1 class="text-[35px] text-[#FF5A60] text-center">India's No.1 Matrimony Service</h1>
+        <div class="grid sm:grid-cols-3 my-[5%]">
+            <div class=" text-center">
+                <p>Mother Tongue</p>
+
+                <div class="border-[1.5px] w-[90%] m-[2%_auto] "></div>
+
+                <ul class="list-none flex m-[3%_15%] text-justify text-[14px] flex-wrap leading-[25px] text-[#565353]">
+                    <li class="hover:underline cursor-pointer">Bengali</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Gujarati</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Hindi</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Kannada</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Malayalam</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Marathi</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Odia</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Punjabi</li>
+                    <li class="">&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer ">Sindhi</li>
+                    <li class=" sm:ml-[30%]">&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Tamil</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Telugu</li>
+                </ul>
+                <div class="text-[#53B9D2] hover:underline cursor-pointer">More Matromonials <i
+                        class="fa-solid fa-caret-right"></i></div>
+            </div>
+
+            <div class=" text-center">
+                <p>Religion</p>
+
+                <div class="border-[1.5px] w-[90%] m-[2%_auto] "></div>
+
+                <ul class="list-none flex m-[3%_15%] text-justify text-[14px] flex-wrap text-[#565353] leading-[25px]">
+                    <li class="hover:underline cursor-pointer ml-[8%]">Buddhist</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Christian</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Jain</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Muslim</li>
+
+                </ul>
+                <div class="text-[#53B9D2] hover:underline cursor-pointer">More Matromonials <i
+                        class="fa-solid fa-caret-right"></i></div>
+            </div>
+
+            <div class=" text-center">
+                <p>Community</p>
+
+                <div class="border-[1.5px] w-[90%] m-[2%_auto] "></div>
+
+                <ul class="list-none flex m-[3%_15%] text-justify text-[14px] flex-wrap text-[#565353] leading-[25px]">
+                    <li class="hover:underline cursor-pointer">Adi Dravida</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Arya Vysya</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Brahmin</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Ezhava</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Iyer</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Kamma</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Maratha</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Nadar</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer ">Nair</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer  sm:ml-[15%]">Reddy</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Vokkaliga</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Yadav</li>
+                </ul>
+                <div class="text-[#53B9D2] hover:underline cursor-pointer">More Matromonials <i
+                        class="fa-solid fa-caret-right"></i></div>
+            </div>
+        </div>
+
+        <div class="sm:w-[40%] mx-auto text-center">
+            <p>Other Matromonials</p>
+
+            <div class="border-[1.5px] w-[90%] m-[2%_auto] "></div>
+
+            <ul class="list-none flex m-[3%_15%] text-justify text-[14px] flex-wrap text-[#565353] leading-[25px]">
+                <li class="hover:underline cursor-pointer">Agarwal</li>
+                <li>&nbsp;|&nbsp;</li>
+                <li class="hover:underline cursor-pointer">Baliji</li>
+                <li>&nbsp;|&nbsp;</li>
+                <li class="hover:underline cursor-pointer">Chettiar</li>
+                <li>&nbsp;|&nbsp;</li>
+                <li class="hover:underline cursor-pointer">Defence</li>
+                <li>&nbsp;|&nbsp;</li>
+                <li class="hover:underline cursor-pointer">Elite</li>
+                <li>&nbsp;|&nbsp;</li>
+                <li class="hover:underline cursor-pointer">Iyengar</li>
+                <li>&nbsp;|&nbsp;</li>
+                <li class="hover:underline cursor-pointer">Jat</li>
+                <li>&nbsp;|&nbsp;</li>
+                <li class="hover:underline cursor-pointer">Kapu</li>
+                <li class="">&nbsp;|&nbsp;</li>
+                <li class="hover:underline cursor-pointer ">Kayastha</li>
+                <li>&nbsp;|&nbsp;</li>
+                <li class="hover:underline cursor-pointer">Lingayat</li>
+                <li>&nbsp;|&nbsp;</li>
+                <li class="hover:underline cursor-pointer">Mudaliyar</li>
+                <li>&nbsp;|&nbsp;</li>
+                <li class="hover:underline cursor-pointer">Padmashali</li>
+                <li>&nbsp;|&nbsp;</li>
+                <li class="hover:underline cursor-pointer">Pillai</li>
+                <li>&nbsp;|&nbsp;</li>
+                <li class="hover:underline cursor-pointer">Rajput</li>
+                <li>&nbsp;|&nbsp;</li>
+                <li class="hover:underline cursor-pointer">Sourashtra</li>
+                <li>&nbsp;|&nbsp;</li>
+                <li class="hover:underline cursor-pointer">Thevar</li>
+                <li>&nbsp;|&nbsp;</li>
+                <li class="hover:underline cursor-pointer  sm:ml-[20%]">Vanniar</li>
+                <li>&nbsp;|&nbsp;</li>
+                <li class="hover:underline cursor-pointer">Vishwakarma</li>
+            </ul>
+            <div class="text-[#53B9D2] hover:underline cursor-pointer">More Matromonials <i
+                    class="fa-solid fa-caret-right"></i></div>
+        </div>
+    </div>
+    <!-- section-6 end -->
+
+    <!-- section-7 start -->
+    <div class="max-w-[100%] bg-[#F1F1F2] my-[4%]">
+        <div class="max-w-[1000px] sm:flex justify-center items-center mx-auto text-center  p-[30px] gap-[20px]">
+            <p class="text-[#FF5A60] sm:text-[30px] text-[25px]">Download the Matrimony App</p>
+            <div class="flex gap-[5px] justify-center mt-[2%]">
+                <img src="images/Matrimony-App-Shaadi.com-Playstore.png" class="w-[15%] sm:w-[30%]">
+                <img src="images/Matrimony-App-Shaadi.com-Appstore.png" class="w-[15%] sm:w-[30%]">
+            </div>
+        </div>
+    </div>
+    <!-- section-7 end -->
+
+    <!-- section-8 start -->
+    <div class="max-w-[1170px] m-[5%_auto]">
+        <p class="text-[#FF5A60] sm:text-[35px] text-center text-[20px]">India's No.1 Matrimony App</p>
+        <div class="grid sm:grid-cols-3 my-[5%]">
+            <div class=" text-center">
+                <p>Mother Tongue</p>
+
+                <div class="border-[1.5px] w-[90%] m-[2%_auto] "></div>
+
+                <ul class="list-none flex m-[3%_15%] text-justify text-[14px] flex-wrap leading-[25px] text-[#565353]">
+                    <li class="hover:underline cursor-pointer">Bengali</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Gujarati</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Hindi</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Malayalam</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Kannada</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Marathi</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Odia</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Punjabi</li>
+                    <li class="">&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer ">Sindhi</li>
+                    <li class=" sm:ml-[30%]">&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Tamil</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Telugu</li>
+                </ul>
+            </div>
+
+            <div class=" text-center">
+                <p>Religion</p>
+
+                <div class="border-[1.5px] w-[90%] m-[2%_auto] "></div>
+
+                <ul class="list-none flex m-[3%_15%] text-justify text-[14px] flex-wrap text-[#565353] leading-[25px]">
+                    <li class="hover:underline cursor-pointer ml-[8%]">Buddhist</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Christian</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Jain</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Muslim</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Parsi</li>
+
+                </ul>
+            </div>
+
+            <div class=" text-center">
+                <p>Community</p>
+
+                <div class="border-[1.5px] w-[90%] m-[2%_auto] "></div>
+
+                <ul class="list-none flex m-[3%_15%] text-justify text-[14px] flex-wrap text-[#565353] leading-[25px]">
+                    <li class="hover:underline cursor-pointer">Brahmin</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Ezhava</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Kapu</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Kamma</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Maratha</li>
+                    <li class=" sm:ml-[15%]">&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Nadar</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer ">Nair</li>
+                    <li>&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Reddy</li>
+                </ul>
+                <div class="text-[#53B9D2] hover:underline cursor-pointer">All Communities <i
+                        class="fa-solid fa-caret-right"></i></div>
+            </div>
+        </div>
+
+    </div>
+    <!-- section-8 end -->
+
+    <!-- section-9 start -->
+    <div class="max-w-[1170px] m-[8%_auto]">
+        <img src="images/home-page-layer-logo.png" class="mx-auto">
+        <div class="my-[4%] text-[#565353] text-[14px] leading-[25px]">
+            <p>Shaadi.com, India’s No.1 Matchmaking and Matrimony Service*, was founded with a simple objective - to
+                help people find happiness. Shaadi.com is a leader in what is sometimes known as the matrimony category,
+                we have touched more than 50 million lives.</p>
+            <br />
+            <p>Shaadi.com - a trusted matrimonial & matchmaking service, has always differentiated itself from other
+                matrimonials through its innovation-led approach by redefining the way Indian brides and grooms meet for
+                marriage.</p>
+            <br />
+            <p>We have also created trusted and renowned community specific matrimony platforms such as TamilShaadi.com,
+                TeluguShaadi.com, MalayaleeShaadi.com, KannadaShaadi.com, BengaliShaadi.com, GujaratiShaadi.com,
+                MarathiShaadi.com, PunjabiShaadi.com and more that has changed the way of finding a life partner.</p>
+            <br />
+            <p>Shaadi.com (sometimes mis-spelt as Shadi.com, Shadhi.com or Sadi.com) is a social networking site
+                specialising in matchmaking and not just a matrimonial service.</p>
+            <br />
+            <p>* Based on the number of downloads in the last 12 months of the Shaadi.com App – as reported by AppTweak.
+            </p>
+            <div class="text-[#53B9D2] hover:underline cursor-pointer">Learn more <i
+                    class="fa-solid fa-caret-right"></i></div>
+            <div class="m-[5%_auto]">
+                <ul class="text-[#53B9D2] flex justify-center">
+                    <li class="hover:underline cursor-pointer ml-[8%]">Indai</li>
+                    <li class="text-black">&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">USA</li>
+                    <li class="text-black">&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Canada</li>
+                    <li class="text-black">&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">UK</li>
+                    <li class="text-black">&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">Australia</li>
+                    <li class="text-black">&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">UAE</li>
+                    <li class="text-black">&nbsp;|&nbsp;</li>
+                    <li class="hover:underline cursor-pointer">NRI Matrimonials <i
+                            class="fa-solid fa-caret-right text-[#ccc]"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- section-9 end -->
+
+    <!-- section-10 start -->
+    <div class="max-w-[1000px] mx-auto text-center my-[2%]">
+        <span class="text-white mb-[2%] bg-[#53B9D2] p-[10px] rounded-[4px_4px_0_0]">Trusted By Millions</span>
+        <div class="w-[80%] bg-[#565353] h-[1px] mx-auto my-[1%]"></div>
+        <div class="w-[80%] mx-auto sm:flex justify-between items-center">
+            <div class="flex items-center gap-[5px]">
+                <img src="images/Screenshot 2024-06-05 121448.png" class="md:w-[30%] w-[20%]">
+                <p class="text-[#565353] text-[20px]">Best Match</p>
+            </div>
+            <div class="flex items-center gap-[5px]">
+                <img src="images/Screenshot 2024-06-05 121425.png" class="md:w-[30%] w-[20%]">
+                <p class="text-[#565353] text-[20px]">Verfied Profile</p>
+            </div>
+            <div class="flex items-center gap-[5px]">
+                <img src="images/Screenshot 2024-06-05 121433.png" class="md:w-[30%] w-[20%]">
+                <p class="text-[#565353] text-[20px]">100% Privacy</p>
+            </div>
+        </div>
+        <div class="w-[80%] bg-[#565353] h-[1px] mx-auto my-[1%]"></div>
+    </div>
+    <!-- section-10 end -->
+
+    <!-- section-11 start -->
+    <div class="max-w-[1170px] m-[6%_auto] p-[10px] md:grid md:grid-cols-4 hidden ">
+        <div class="text-center">
+            <p>Need Help?</p>
+            <div class="border-[1px] w-[90%] m-[2%_auto] text-[] "></div>
+            <ul class="list-none text-[#565353]">
+                <li class="hover:underline cursor-pointer">Member Login</li>
+                <li class="hover:underline cursor-pointer">Sign Up</li>
+                <li class="hover:underline cursor-pointer">Partner Search</li>
+                <li class="hover:underline cursor-pointer">How to Use Shaadi.com</li>
+                <li class="hover:underline cursor-pointer">Premium Membership</li>
+                <li class="hover:underline cursor-pointer">Customer Support</li>
+                <li class="hover:underline cursor-pointer">Site Map</li>
+            </ul>
+        </div>
+
+        <div class="text-center">
+            <p>Company</p>
+            <div class="border-[1px] w-[90%] m-[2%_auto] text-[] "></div>
+            <ul class="list-none text-[#565353]">
+                <li class="hover:underline cursor-pointer">About Us</li>
+                <li class="hover:underline cursor-pointer">Shaadi Blog</li>
+                <li class="hover:underline cursor-pointer">Career</li>
+                <li class="hover:underline cursor-pointer">Award & Recognition</li>
+                <li class="hover:underline cursor-pointer">Cov-Aid</li>
+                <li class="hover:underline cursor-pointer">Contact Us</li>
+            </ul>
+        </div>
+
+        <div class="text-center">
+            <p>Privacy & You</p>
+            <div class="border-[1px] w-[90%] m-[2%_auto] text-[] "></div>
+            <ul class="list-none text-[#565353]">
+                <li class="hover:underline cursor-pointer">Terms of Use</li>
+                <li class="hover:underline cursor-pointer">Privacy Policy</li>
+                <li class="hover:underline cursor-pointer">Be Safe Online</li>
+                <li class="hover:underline cursor-pointer">Report Misuse</li>
+            </ul>
+        </div>
+
+        <div class="text-center">
+            <p>More</p>
+            <div class="border-[1px] w-[90%] m-[2%_auto] text-[] "></div>
+            <ul class="list-none text-[#565353]">
+                <li class="hover:underline cursor-pointer">VIP Shaadi</li>
+                <li class="hover:underline cursor-pointer">Select Shaadi</li>
+                <li class="hover:underline cursor-pointer">Sangam</li>
+                <li class="hover:underline cursor-pointer">Shaadi Center</li>
+                <li class="hover:underline cursor-pointer">Success Stories</li>
+                <li class="hover:underline cursor-pointer">Shaadi Live</li>
+            </ul>
+        </div>
+    </div>
+    <!-- section-11 end -->
+
+    <!-- section-12 start -->
+    <div class="max-w-[100%] bg-[#F1F1F2] p-[20px]">
+        <div class="max-w-[1170px] flex justify-between items-center text-[#565353] text-[12px]">
+            <div class="">© 1996-2024 Shaadi.com, The World's Leading Matchmaking Service™</div>
+            <div class="">Passionately created by <span class="text-[#53B9D2] cursor-pointer hover:underline">People Group ➤</span></div>
+        </div>
+    </div>
+    <!-- section-12 end -->
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+    let mymodal = document.getElementById("modal1");
+    let inside = document.getElementById("insidediv");
+    let back = document.getElementById("backdiv");
+    let btn = document.getElementById("btn");
+    mymodal.addEventListener("click", () => {
+        inside.classList.add("active");
+        back.style.display = "block";
+    })
+    btn.addEventListener("click", () => {
+        inside.classList.remove("active");
+        back.style.display = "none";
+    })
+</script>
+<script>
+    $('#owl_carousel1').owlCarousel({
+        loop: true,
+        slideby: 3,
+        margin: 30,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 2000,
+            },
+            640: {
+                items: 3
+            },
+        }
+    })
+</script>
+
+</html>
